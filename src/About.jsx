@@ -16,7 +16,7 @@ const About = () => {
         <div className="about-image">
           <img
             src={Image}
-            alt="About Me"
+            alt="Ayyappan"
           />
 
           <div className="about-badge">
