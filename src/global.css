@@ -90,6 +90,7 @@ h2::after{
 
 /* ------------------ NAVBAR ------------------ */
 
+/* ===== NAVBAR BASE ===== */
 .nav {
   position: fixed;
   width: 100%;
@@ -103,10 +104,12 @@ h2::after{
   z-index: 1000;
 }
 
+/* ===== LOGO ===== */
 .logo span {
   color: #00d9ff;
 }
 
+/* ===== DESKTOP MENU ===== */
 .nav-links {
   display: flex;
   list-style: none;
@@ -127,6 +130,65 @@ h2::after{
   color: #00d9ff;
 }
 
+/* ===== HAMBURGER ICON (Hidden on Desktop) ===== */
+.hamburger {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: white;
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 768px) {
+
+  /* Reduce padding for small screens */
+  .nav {
+    padding: 15px 6%;
+  }
+
+  /* Show hamburger */
+  .hamburger {
+    display: block;
+  }
+
+  /* Hide menu initially */
+  .nav-links {
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    background: #020617;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 25px 0;
+
+    display: none;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+
+  /* Show menu when active (React adds this class) */
+  .nav-links.active {
+    display: flex;
+  }
+
+  /* Bigger touch-friendly links */
+  .nav-links li a {
+    font-size: 17px;
+    padding: 10px 0;
+  }
+}
+
+/* ===== SMALL DEVICES (Extra Fix) ===== */
+@media (max-width: 480px) {
+  .logo h2 {
+    font-size: 18px;
+  }
+
+  .hamburger {
+    font-size: 24px;
+  }
+}
 
 /* ------------------ HERO ------------------ */
 .hero{
