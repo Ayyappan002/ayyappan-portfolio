@@ -1,5 +1,5 @@
 import "./global.css";
-import Image from "./assets/image.png";
+import Image from "./assets/Image.png";
 
 const About = () => {
   return (

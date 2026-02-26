@@ -34,7 +34,6 @@ const projects = [
     image: project4,
     tech: ["JavaScript", "Web Speech API", "HTML", "CSS"],
   },
- 
   {
     title: "My Portfolio Website",
     description:

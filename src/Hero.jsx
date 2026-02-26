@@ -54,7 +54,7 @@ const Hero = () => {
       {/* RIGHT IMAGE — NOT MODIFIED */}
       <div className="hero-right" data-aos="zoom-in">
         <div className="img-wrapper">
-          <img src={profile} alt="Ayyappan" />
+          <img src={profile} alt="Ayyappan's Profile" />
         </div>
       </div>
 
