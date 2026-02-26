@@ -30,7 +30,7 @@ const Hero = () => {
             View Projects →
           </a>
 
-          <a href="/resume.pdf" className="btn outline">
+          <a href="/Ayyappan_resume.pdf"  download className="btn outline">
             ⬇ Download CV
           </a>
         </div>
