@@ -1,3 +1,4 @@
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import Navbar from "./Navbar";
 import Hero from "./Hero";
 import About from "./About";
@@ -17,6 +18,7 @@ function App() {
       <Skills />
       <Projects />
       <Contact/>
+      <SpeedInsights />
     </>
   );
 }
