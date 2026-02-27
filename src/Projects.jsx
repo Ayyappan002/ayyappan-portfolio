@@ -1,73 +1,61 @@
 import "./global.css";
+import { useNavigate } from "react-router-dom";
 import project1 from "./assets/project1.png";
 import project2 from "./assets/project2.png";
 import project3 from "./assets/project3.png";
 import project4 from "./assets/project4.png";
-import project6 from "./assets/project5.png";
+import project5 from "./assets/project5.png";
 
 const projects = [
   {
+    id: 1,
     title: "Tuberculosis Detection (AI)",
-    description:
-      "AI model using Chest X-Ray imaging for tuberculosis screening and early detection.",
+    description: "AI model using Chest X-Ray imaging.",
     image: project1,
-    tech: ["Python", "TensorFlow", "OpenCV", "Flask"],
   },
   {
+    id: 2,
     title: "Face Recognition Attendance",
-    description:
-      "Automated student attendance system using computer vision and face recognition.",
+    description: "Automated attendance using face recognition.",
     image: project2,
-    tech: ["Python", "OpenCV", "Machine Learning"],
   },
   {
+    id: 3,
     title: "Weather App",
-    description:
-      "React app with API integration and live weather updates with dynamic UI.",
+    description: "Live weather updates with API.",
     image: project3,
-    tech: ["React", "API", "CSS", "JavaScript"],
   },
   {
+    id: 4,
     title: "Text To Voice Converter",
-    description:
-      "Web application that converts written text into speech using speech synthesis API.",
+    description: "Convert text into speech.",
     image: project4,
-    tech: ["JavaScript", "Web Speech API", "HTML", "CSS"],
   },
   {
+    id: 5,
     title: "My Portfolio Website",
-    description:
-      "Personal portfolio website built with React showcasing skills, projects, and experience.",
-    image: project6,
-    tech: ["React", "Tailwind CSS", "JavaScript"],
+    description: "Personal React portfolio.",
+    image: project5,
   },
 ];
 
 const Projects = () => {
+  const navigate = useNavigate();
+
   return (
     <section className="projects-section" id="projects">
-      <div className="projects-title">
-        <h2>
-          My <span>Projects</span>
-        </h2>
-        <p>Here are some of my recent works and projects</p>
-      </div>
+      <h2>My <span>Projects</span></h2>
 
       <div className="projects-grid">
-        {projects.map((project, index) => (
-          <div className="project-card" key={index}>
-            <img src={project.image} alt={project.title} />
-
-            <div className="project-content">
-              <h3>{project.title}</h3>
-              <p>{project.description}</p>
-
-              <div className="tech-stack">
-                {project.tech.map((tech, i) => (
-                  <span key={i}>{tech}</span>
-                ))}
-              </div>
-            </div>
+        {projects.map((project) => (
+          <div
+            className="project-card"
+            key={project.id}
+            onClick={() => navigate(`/project/${project.id}`)}
+          >
+            <img src={project.image} />
+            <h3>{project.title}</h3>
+            <p>{project.description}</p>
           </div>
         ))}
       </div>

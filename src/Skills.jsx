@@ -14,7 +14,7 @@ import {
   SiExpress,
   SiFigma,
   SiCanva,
-  SiPostman
+
 } from "react-icons/si";
 
 import "./global.css";
