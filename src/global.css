@@ -92,7 +92,8 @@ h2::after{
 
 /* ===== NAVBAR BASE ===== */
 .nav {
-  position: fixed;
+  position:fixed;
+  height: 75px;
   width: 100%;
   top: 0;
   left: 0;
@@ -101,7 +102,7 @@ h2::after{
   justify-content: space-between;
   align-items: center;
   background: #0b1a2f;
-  z-index: 1000;
+  z-index: 900;
 }
 
 /* ===== LOGO ===== */
@@ -113,7 +114,7 @@ h2::after{
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 20px;
+  gap: 30px;
 }
 
 .nav-links li a {
@@ -122,7 +123,7 @@ h2::after{
   display: flex;
   align-items: center;
   gap: 6px;
-  font-size: 14px;
+  font-size: 16px;
   transition: 0.3s ease;
 }
 
