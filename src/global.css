@@ -96,7 +96,7 @@ h2::after{
   width: 100%;
   top: 0;
   left: 0;
-  padding: 15px 10%;
+  padding: 10px 10%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -113,7 +113,7 @@ h2::after{
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 25px;
+  gap: 20px;
 }
 
 .nav-links li a {
@@ -121,8 +121,8 @@ h2::after{
   color: white;
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-size: 15px;
+  gap: 6px;
+  font-size: 14px;
   transition: 0.3s ease;
 }
 
@@ -148,10 +148,11 @@ h2::after{
 
   /* Show hamburger */
   .hamburger {
-    display: block;
+    display: block !important;
+    z-index: 1001;
   }
 
-  /* Hide menu initially */
+  /* Hide menu initially - CRITICAL FIX */
   .nav-links {
     position: absolute;
     top: 65px;
@@ -162,14 +163,24 @@ h2::after{
     align-items: center;
     gap: 20px;
     padding: 25px 0;
-
-    display: none;
     border-top: 1px solid rgba(255,255,255,0.1);
+
+    display: none !important;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    height: 0;
+    overflow: hidden;
   }
 
   /* Show menu when active (React adds this class) */
   .nav-links.active {
-    display: flex;
+    display: flex !important;
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+    height: auto;
+    overflow: visible;
   }
 
   /* Bigger touch-friendly links */
